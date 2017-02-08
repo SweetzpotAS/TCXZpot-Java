@@ -1,10 +1,8 @@
 package com.sweetzpot.tcxzpot;
 
-import java.util.Date;
-
 public class Trackpoint {
 
-    private final Date time;
+    private final TCXDate time;
     private final Position position;
     private final Double altitude;
     private final Double distance;
@@ -12,7 +10,7 @@ public class Trackpoint {
     private final Cadence cadence;
     private final SensorState sensorState;
 
-    public Trackpoint(Date time, Position position, Double altitude, Double distance, HeartRate heartRate,
+    public Trackpoint(TCXDate time, Position position, Double altitude, Double distance, HeartRate heartRate,
                       Cadence cadence, SensorState sensorState) {
         this.time = time;
         this.position = position;

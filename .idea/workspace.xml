@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java" />
     </list>
     <ignored path="TCXZpot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,14 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TCXDate.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java">
+      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2051,12 +2049,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/AbstractSource.java" />
-        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Track.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Lap.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activities.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TrainingCenterDatabase.java" />
-        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Serializer.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXSerializable.java" />
         <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/SensorStateTest.groovy" />
@@ -2085,6 +2081,8 @@
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java" />
         <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/HeartRateTest.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" />
       </list>
     </option>
   </component>
@@ -2180,7 +2178,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/StudioProjects" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java&#10;HeartRa&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java&#10;Applica&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Application.java&#10;Device&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Device.java&#10;Caden&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Cadence.java&#10;Posi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Position.java&#10;Build&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java&#10;Versi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;Spor&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java&#10;Versio&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;BuildT&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/BuildType.java&#10;Inte&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java&#10;Trig&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
+    <property name="SearchEverywhereHistoryKey" value="Act&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java&#10;Track&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java&#10;HeartRa&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java&#10;Applica&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Application.java&#10;Device&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Device.java&#10;Caden&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Cadence.java&#10;Posi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Position.java&#10;Build&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java&#10;Versi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;Spor&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java&#10;Versio&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;BuildT&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/BuildType.java&#10;Inte&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java&#10;Trig&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
@@ -2772,16 +2770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding>
-            <marker date="1486552965000" expanded="true" signature="508:751" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Track.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -2825,17 +2813,6 @@
           <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
           <folding>
             <marker date="1486553897000" expanded="true" signature="234:309" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1486553933000" expanded="true" signature="39:77" ph="..." />
-            <marker date="1486553933000" expanded="true" signature="367:510" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3144,8 +3121,29 @@
         <state relative-caret-position="225">
           <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1486559119000" expanded="true" signature="39:81" ph="..." />
+            <marker date="1486559119000" expanded="true" signature="205:594" ph="{...}" />
+            <marker date="1486559119000" expanded="false" signature="655:666" ph=" { " />
+            <marker date="1486559119000" expanded="false" signature="683:689" ph=" }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Trackpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <marker date="1486559223000" expanded="true" signature="490:733" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
