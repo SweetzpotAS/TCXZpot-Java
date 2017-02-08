@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public class Position {
+public class Position implements TCXSerializable {
 
     private final double latitude;
     private final double longitude;
@@ -18,5 +18,13 @@ public class Position {
         if(longitude < -180 || longitude > 180) {
             throw new IllegalArgumentException("Longitude must be in range [-180, 180]");
         }
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Position>");
+        serializer.print("<LatitudeDegrees>" + latitude + "</LatitudeDegrees>");
+        serializer.print("<LongitudeDegrees>" + longitude + "</LongitudeDegrees>");
+        serializer.print("</Position>");
     }
 }
