@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
     </list>
     <ignored path="TCXZpot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,14 +35,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Sport.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java">
+      <file leaf-file-name="TriggerMethod.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="195">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
-                <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2050,6 +2049,7 @@
       <list>
         <option value="$PROJECT_DIR$/lib/build.gradle" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
       </list>
     </option>
   </component>
@@ -2135,6 +2135,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/StudioProjects" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2502,8 +2503,19 @@
         <state relative-caret-position="165">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
+            <marker date="1486551271000" expanded="true" signature="181:192" ph=" { " />
+            <marker date="1486551271000" expanded="true" signature="217:223" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
