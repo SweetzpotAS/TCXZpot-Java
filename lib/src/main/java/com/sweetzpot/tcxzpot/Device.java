@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public class Device extends AbstractSource {
+public class Device extends AbstractSource implements TCXSerializable {
 
     private final int unitID;
     private final int productID;
@@ -11,5 +11,15 @@ public class Device extends AbstractSource {
         this.unitID = unitID;
         this.productID = productID;
         this.version = version;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Device>");
+        serializer.print("<Name>" + name + "</Name>");
+        serializer.print("<UnitId>" + unitID + "</UnitId>");
+        serializer.print("<ProductID>" + productID + "</ProductID>");
+        version.serialize(serializer);
+        serializer.print("</Device>");
     }
 }
