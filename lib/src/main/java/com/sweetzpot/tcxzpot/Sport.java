@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public enum Sport {
+public enum Sport implements TCXSerializable {
     RUNNING("Running"),
     BIKING("Biking"),
     OTHER("Other");
@@ -9,5 +9,10 @@ public enum Sport {
 
     Sport(String rawValue) {
         this.rawValue = rawValue;
+    }
+    
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print(rawValue);
     }
 }
