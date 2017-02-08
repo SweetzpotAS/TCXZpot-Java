@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public enum SensorState {
+public enum SensorState implements TCXSerializable {
     PRESENT("Present"),
     ABSENT("Absent");
 
@@ -8,5 +8,10 @@ public enum SensorState {
 
     SensorState(String rawValue) {
         this.rawValue = rawValue;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<SensorState>" + rawValue + "</SensorState>");
     }
 }
