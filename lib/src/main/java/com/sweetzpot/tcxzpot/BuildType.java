@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public enum BuildType {
+public enum BuildType implements TCXSerializable {
     INTERNAL("Internal"),
     ALPHA("Alpha"),
     BETA("Beta"),
@@ -10,5 +10,10 @@ public enum BuildType {
 
     BuildType(String rawValue) {
         this.rawValue = rawValue;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Type>" + rawValue + "</Type>");
     }
 }
