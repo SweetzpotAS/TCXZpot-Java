@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java" />
     </list>
     <ignored path="TCXZpot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,15 +35,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Version.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java">
+      <file leaf-file-name="Build.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-              <folding>
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2055,6 +2052,7 @@
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/SensorState.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/BuildType.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java" />
       </list>
     </option>
   </component>
@@ -2563,9 +2561,18 @@
         <state relative-caret-position="150">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
           <folding>
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
+            <marker date="1486551828000" expanded="true" signature="251:262" ph=" { " />
+            <marker date="1486551828000" expanded="true" signature="301:307" ph=" }" />
+            <marker date="1486551828000" expanded="true" signature="396:563" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
