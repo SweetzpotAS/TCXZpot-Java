@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Serializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXSerializable.java" />
     </list>
     <ignored path="TCXZpot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,14 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java">
+      <file leaf-file-name="TCXSerializable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXSerializable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="94" selection-start-line="13" selection-start-column="94" selection-end-line="13" selection-end-column="94" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,6 +53,7 @@
       <list>
         <option value="ASEnum" />
         <option value="ASClass" />
+        <option value="ASInterface" />
       </list>
     </option>
   </component>
@@ -2067,6 +2067,8 @@
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activities.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TrainingCenterDatabase.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Serializer.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXSerializable.java" />
       </list>
     </option>
   </component>
@@ -2694,11 +2696,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="94" selection-start-line="13" selection-start-column="94" selection-end-line="13" selection-end-column="94" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1486553933000" expanded="true" signature="39:77" ph="..." />
+            <marker date="1486553933000" expanded="true" signature="367:510" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Serializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXSerializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
