@@ -1,14 +1,13 @@
 package com.sweetzpot.tcxzpot;
 
-public class Application {
+public class Application extends AbstractSource{
 
-    private final String name;
     private final Build build;
     private final String languageID;
     private final String partNumber;
 
     public Application(String name, Build build, String languageID, String partNumber) {
-        this.name = name;
+        super(name);
         this.build = build;
         this.languageID = languageID;
         this.partNumber = partNumber;
