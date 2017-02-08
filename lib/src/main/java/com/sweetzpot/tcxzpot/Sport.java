@@ -10,7 +10,7 @@ public enum Sport implements TCXSerializable {
     Sport(String rawValue) {
         this.rawValue = rawValue;
     }
-    
+
     @Override
     public void serialize(Serializer serializer) {
         serializer.print(rawValue);

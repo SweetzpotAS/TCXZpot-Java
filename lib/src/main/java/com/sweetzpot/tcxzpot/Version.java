@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public class Version {
+public class Version implements TCXSerializable {
 
     private final int versionMajor;
     private final int versionMinor;
@@ -16,5 +16,15 @@ public class Version {
         this.versionMinor = versionMinor;
         this.buildMajor = buildMajor;
         this.buildMinor = buildMinor;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Version>");
+        serializer.print("<VersionMajor>" + versionMajor + "</VersionMajor>");
+        serializer.print("<VersionMinor>" + versionMinor + "</VersionMinor>");
+        serializer.print("<BuildMajor>" + buildMajor + "</BuildMajor>");
+        serializer.print("<BuildMinor>" + buildMinor + "</BuildMinor>");
+        serializer.print("</Version>");
     }
 }
