@@ -1,12 +1,15 @@
 package com.sweetzpot.tcxzpot;
 
-public class Cadence {
+public class Cadence implements TCXSerializable {
 
-    private final double low;
-    private final double high;
+    private final int value;
 
-    public Cadence(double low, double high) {
-        this.low = low;
-        this.high = high;
+    public Cadence(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Cadence>" + value + "</Cadence>");
     }
 }
