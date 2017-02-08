@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/HeartRateTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java" />
     </list>
     <ignored path="TCXZpot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HeartRateTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/HeartRateTest.java">
+      <file leaf-file-name="TCXDate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="225">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,9 +54,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="ASEnum" />
-        <option value="ASClass" />
         <option value="ASInterface" />
         <option value="JUnit4 Test Class" />
+        <option value="ASClass" />
       </list>
     </option>
   </component>
@@ -2085,6 +2084,7 @@
         <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/ApplicationTest.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java" />
         <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/HeartRateTest.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java" />
       </list>
     </option>
   </component>
@@ -2180,7 +2180,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/StudioProjects" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="HeartRa&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java&#10;Applica&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Application.java&#10;Device&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Device.java&#10;Caden&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Cadence.java&#10;Posi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Position.java&#10;Build&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java&#10;Versi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;Spor&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java&#10;Versio&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;BuildT&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/BuildType.java&#10;Inte&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java&#10;Trig&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java&#10;HeartRa&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/HeartRate.java&#10;Applica&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Application.java&#10;Device&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Device.java&#10;Caden&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Cadence.java&#10;Posi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Position.java&#10;Build&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java&#10;Versi&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;Spor&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java&#10;Versio&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java&#10;BuildT&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/BuildType.java&#10;Inte&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java&#10;Trig&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
@@ -2695,7 +2695,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3132,6 +3132,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <marker date="1486558939000" expanded="true" signature="39:137" ph="..." />
+            <marker date="1486558939000" expanded="true" signature="243:453" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TCXDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
