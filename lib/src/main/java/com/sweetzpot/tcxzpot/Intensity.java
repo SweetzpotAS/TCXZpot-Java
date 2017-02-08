@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public enum Intensity {
+public enum Intensity implements TCXSerializable {
     ACTIVE("Active"),
     RESTING("Resting");
 
@@ -8,5 +8,10 @@ public enum Intensity {
 
     Intensity(String rawValue) {
         this.rawValue = rawValue;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Intensity>" + rawValue + "</Intensity>");
     }
 }

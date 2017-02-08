@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/TriggerMethodTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/IntensityTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java" afterPath="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java" />
     </list>
     <ignored path="TCXZpot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TriggerMethodTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/TriggerMethodTest.java">
+      <file leaf-file-name="IntensityTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/IntensityTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+              <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2052,7 +2052,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Sport.java" />
-        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/BuildType.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Version.java" />
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Build.java" />
@@ -2076,6 +2075,8 @@
         <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/SensorState.java" />
         <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/SensorStateTest.java" />
         <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/TriggerMethodTest.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java" />
+        <option value="$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/IntensityTest.java" />
       </list>
     </option>
   </component>
@@ -2169,9 +2170,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/StudioProjects" />
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java&#10;Trig&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
+    <property name="SearchEverywhereHistoryKey" value="Inte&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java&#10;Trig&#9;FILE&#9;file:///Users/tomasruizlopez/Development/TCXZpot/lib/src/main/java/com/sweetzpot/tcxzpot/TriggerMethod.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
@@ -2184,7 +2185,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TriggerMethodTest.producesCorrectSerialization">
+  <component name="RunManager" selected="JUnit.IntensityTest.producesCorrectSerialization">
     <configuration default="false" name="SensorStateTest.producesCorrectSerialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -2223,6 +2224,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.sweetzpot.tcxzpot" />
       <option name="MAIN_CLASS_NAME" value="com.sweetzpot.tcxzpot.TriggerMethodTest" />
+      <option name="METHOD_NAME" value="producesCorrectSerialization" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lib" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IntensityTest.producesCorrectSerialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sweetzpot.tcxzpot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lib" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sweetzpot.tcxzpot" />
+      <option name="MAIN_CLASS_NAME" value="com.sweetzpot.tcxzpot.IntensityTest" />
       <option name="METHOD_NAME" value="producesCorrectSerialization" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -2511,15 +2538,17 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SensorStateTest.producesCorrectSerialization" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TriggerMethodTest.producesCorrectSerialization" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.IntensityTest.producesCorrectSerialization" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TriggerMethodTest.producesCorrectSerialization" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SensorStateTest.producesCorrectSerialization" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IntensityTest.producesCorrectSerialization" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TriggerMethodTest.producesCorrectSerialization" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SensorStateTest.producesCorrectSerialization" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -2538,6 +2567,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="84b36fc0-548d-4dbb-b390-b832ad6de09c" name="Default" comment="" />
@@ -2549,6 +2581,9 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="IntensityTest_producesCorrectSerialization - 2017.02.08 at 12h 57m 02s.xml">
+      <configuration name="IntensityTest.producesCorrectSerialization" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="SensorStateTest_producesCorrectSerialization - 2017.02.08 at 12h 48m 28s.xml">
       <configuration name="SensorStateTest.producesCorrectSerialization" configurationId="JUnit" />
     </history-entry>
@@ -2578,7 +2613,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2644,13 +2679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -2858,6 +2886,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding>
+            <marker date="1486554762000" expanded="true" signature="39:137" ph="..." />
+            <marker date="1486554762000" expanded="true" signature="247:439" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/sweetzpot/tcxzpot/Intensity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding>
+            <marker date="1486554851000" expanded="true" signature="196:207" ph=" { " />
+            <marker date="1486554851000" expanded="true" signature="232:238" ph=" }" />
+            <marker date="1486554851000" expanded="true" signature="303:379" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/test/java/com/sweetzpot/tcxzpot/IntensityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
