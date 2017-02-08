@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public enum TriggerMethod {
+public enum TriggerMethod implements TCXSerializable {
     MANUAL("Manual"),
     DISTANCE("Distance"),
     LOCATION("Location"),
@@ -11,5 +11,10 @@ public enum TriggerMethod {
 
     TriggerMethod(String rawValue) {
         this.rawValue = rawValue;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<TriggerMethod>" + rawValue + "</TriggerMethod>");
     }
 }
