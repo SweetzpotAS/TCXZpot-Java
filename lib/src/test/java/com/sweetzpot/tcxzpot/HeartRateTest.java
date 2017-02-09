@@ -2,6 +2,7 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
+import static com.sweetzpot.tcxzpot.HeartRate.bpm;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -11,8 +12,7 @@ public class HeartRateTest {
     public void producesCorrectSerialization() throws Exception {
         Serializer serializer = mock(Serializer.class);
 
-        HeartRate heartRate = new HeartRate(82);
-        heartRate.serialize(serializer);
+        bpm(82).serialize(serializer);
 
         verify(serializer).print("<Value>82</Value>");
     }
