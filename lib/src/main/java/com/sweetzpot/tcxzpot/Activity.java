@@ -6,11 +6,11 @@ public class Activity implements TCXSerializable {
 
     private final TCXDate id;
     private final List<Lap> laps;
-    private final String notes;
+    private final Notes notes;
     private final AbstractSource creator;
     private final Sport sport;
 
-    public Activity(TCXDate id, List<Lap> laps, String notes, AbstractSource creator, Sport sport) {
+    public Activity(TCXDate id, List<Lap> laps, Notes notes, AbstractSource creator, Sport sport) {
         this.id = id;
         this.laps = laps;
         this.notes = notes;
@@ -25,7 +25,7 @@ public class Activity implements TCXSerializable {
         for(Lap lap : laps) {
             lap.serialize(serializer);
         }
-        if(notes != null) serializer.print("<Notes>" + notes + "</Notes>");
+        if(notes != null) notes.serialize(serializer);
         if(creator != null) {
             serializer.print("<Creator xsi:type=\"" + creator.tcxType() + "\">");
             creator.serialize(serializer);

@@ -18,17 +18,18 @@ public class ActivityTest {
         Serializer serializer = mock(Serializer.class);
         Lap lap = mock(Lap.class);
         List<Lap> laps = Arrays.asList(lap);
+        Notes notes = mock(Notes.class);
         Application application = mock(Application.class);
         when(application.tcxType()).thenCallRealMethod();
 
         Activity activity = new Activity(tcxDate(1, FEBRUARY, 2017, 12, 34, 56), laps,
-                "Notes for this activity", application, Sport.RUNNING);
+                notes, application, Sport.RUNNING);
         activity.serialize(serializer);
 
         verify(serializer).print("<Activity Sport=\"Running\">");
         verify(serializer).print("<Id>2017-02-01T12:34:56.000Z</Id>");
         verify(lap).serialize(serializer);
-        verify(serializer).print("<Notes>Notes for this activity</Notes>");
+        verify(notes).serialize(serializer);
         verify(serializer).print("<Creator xsi:type=\"Application_t\">");
         verify(application).serialize(serializer);
         verify(serializer).print("</Creator>");
