@@ -6,9 +6,13 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
+import static com.sweetzpot.tcxzpot.Intensity.ACTIVE;
 import static com.sweetzpot.tcxzpot.TCXDate.tcxDate;
+import static com.sweetzpot.tcxzpot.TriggerMethod.MANUAL;
+import static com.sweetzpot.tcxzpot.builders.LapBuilder.aLap;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 public class LapTest {
 
@@ -22,10 +26,19 @@ public class LapTest {
         List<Track> tracks = Arrays.asList(track);
         Notes notes = mock(Notes.class);
 
-        Lap lap = new Lap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56), 651, 350, 10.0, 1534,
-                averageHeartRate, maximumHeartRate, Intensity.ACTIVE, cadence, TriggerMethod.MANUAL,
-                tracks, notes);
-        lap.serialize(serializer);
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withTotalTime(651)
+                .withDistance(350)
+                .withMaximumSpeed(10)
+                .withCalories(1534)
+                .withAverageHeartRate(averageHeartRate)
+                .withMaximumHeartRate(maximumHeartRate)
+                .withIntensity(ACTIVE)
+                .withCadence(cadence)
+                .withTriggerMethod(MANUAL)
+                .withTracks(tracks)
+                .withNotes(notes)
+                .build().serialize(serializer);
 
         verify(serializer).print("<Lap StartTime=\"2017-02-01T12:34:56.000Z\">");
         verify(serializer).print("<TotalTimeSeconds>651.0</TotalTimeSeconds>");
@@ -50,10 +63,13 @@ public class LapTest {
     public void producesCorrectSerializationWithMissingArguments() throws Exception {
         Serializer serializer = mock(Serializer.class);
 
-        Lap lap = new Lap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56), 651, 350, null, 1534,
-                null, null, Intensity.ACTIVE, null, TriggerMethod.MANUAL,
-                null, null);
-        lap.serialize(serializer);
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withTotalTime(651)
+                .withDistance(350)
+                .withCalories(1534)
+                .withIntensity(ACTIVE)
+                .withTriggerMethod(MANUAL)
+                .build().serialize(serializer);
 
         verify(serializer).print("<Lap StartTime=\"2017-02-01T12:34:56.000Z\">");
         verify(serializer).print("<TotalTimeSeconds>651.0</TotalTimeSeconds>");
@@ -62,5 +78,67 @@ public class LapTest {
         verify(serializer).print("<Intensity>Active</Intensity>");
         verify(serializer).print("<TriggerMethod>Manual</TriggerMethod>");
         verify(serializer).print("</Lap>");
+        verifyNoMoreInteractions(serializer);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingStartTime() throws Exception {
+        aLap(null)
+                .withTotalTime(651)
+                .withDistance(350)
+                .withCalories(1534)
+                .withIntensity(ACTIVE)
+                .withTriggerMethod(MANUAL)
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingTotalTime() throws Exception {
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withDistance(350)
+                .withCalories(1534)
+                .withIntensity(ACTIVE)
+                .withTriggerMethod(MANUAL)
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingDistance() throws Exception {
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withTotalTime(651)
+                .withCalories(1534)
+                .withIntensity(ACTIVE)
+                .withTriggerMethod(MANUAL)
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingCalories() throws Exception {
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withTotalTime(651)
+                .withDistance(350)
+                .withIntensity(ACTIVE)
+                .withTriggerMethod(MANUAL)
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingIntensity() throws Exception {
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withTotalTime(651)
+                .withDistance(350)
+                .withCalories(1534)
+                .withTriggerMethod(MANUAL)
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingTriggerMethod() throws Exception {
+        aLap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56))
+                .withTotalTime(651)
+                .withDistance(350)
+                .withCalories(1534)
+                .withIntensity(ACTIVE)
+                .build();
     }
 }
