@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Activities {
+public class Activities implements TCXSerializable {
 
     private final List<Activity> activities;
 
@@ -15,5 +15,14 @@ public class Activities {
     public Activities(Activity... activities) {
         this.activities = new ArrayList<>();
         Collections.addAll(this.activities, activities);
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Activities>");
+        for(Activity activity : activities) {
+            activity.serialize(serializer);
+        }
+        serializer.print("</Activities>");
     }
 }
