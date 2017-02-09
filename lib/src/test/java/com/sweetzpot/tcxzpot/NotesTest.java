@@ -2,6 +2,7 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
+import static com.sweetzpot.tcxzpot.Notes.notes;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -11,8 +12,7 @@ public class NotesTest {
     public void producesCorrectSerialization() throws Exception {
         Serializer serializer = mock(Serializer.class);
 
-        Notes notes = new Notes("Sample notes");
-        notes.serialize(serializer);
+        notes("Sample notes").serialize(serializer);
 
         verify(serializer).print("<Notes>Sample notes</Notes>");
     }
