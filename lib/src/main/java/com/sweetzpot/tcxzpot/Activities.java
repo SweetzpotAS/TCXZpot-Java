@@ -6,6 +6,14 @@ import java.util.List;
 
 public class Activities implements TCXSerializable {
 
+    public static Activities activities(Activity... activities) {
+        return new Activities(activities);
+    }
+
+    public static Activities activities(List<Activity> activities) {
+        return new Activities(activities);
+    }
+
     private final List<Activity> activities;
 
     public Activities(List<Activity> activities) {

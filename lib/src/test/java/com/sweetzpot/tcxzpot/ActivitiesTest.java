@@ -2,6 +2,7 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
+import static com.sweetzpot.tcxzpot.Activities.activities;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -12,8 +13,7 @@ public class ActivitiesTest {
         Serializer serializer = mock(Serializer.class);
         Activity activity = mock(Activity.class);
 
-        Activities activities = new Activities(activity);
-        activities.serialize(serializer);
+        activities(activity).serialize(serializer);
 
         verify(serializer).print("<Activities>");
         verify(activity).serialize(serializer);
