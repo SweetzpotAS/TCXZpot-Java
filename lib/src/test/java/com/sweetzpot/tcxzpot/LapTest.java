@@ -20,10 +20,11 @@ public class LapTest {
         Cadence cadence = mock(Cadence.class);
         Track track = mock(Track.class);
         List<Track> tracks = Arrays.asList(track);
+        Notes notes = mock(Notes.class);
 
         Lap lap = new Lap(tcxDate(1, Calendar.FEBRUARY, 2017, 12, 34, 56), 651, 350, 10.0, 1534,
                 averageHeartRate, maximumHeartRate, Intensity.ACTIVE, cadence, TriggerMethod.MANUAL,
-                tracks, "Notes for this lap");
+                tracks, notes);
         lap.serialize(serializer);
 
         verify(serializer).print("<Lap StartTime=\"2017-02-01T12:34:56.000Z\">");
@@ -41,7 +42,7 @@ public class LapTest {
         verify(cadence).serialize(serializer);
         verify(serializer).print("<TriggerMethod>Manual</TriggerMethod>");
         verify(track).serialize(serializer);
-        verify(serializer).print("<Notes>Notes for this lap</Notes>");
+        verify(notes).serialize(serializer);
         verify(serializer).print("</Lap>");
     }
 

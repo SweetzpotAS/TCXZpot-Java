@@ -15,11 +15,11 @@ public class Lap implements TCXSerializable {
     private final Cadence cadence;
     private final TriggerMethod triggerMethod;
     private final List<Track> tracks;
-    private final String notes;
+    private final Notes notes;
 
     public Lap(TCXDate startTime, double totalTime, double distance, Double maximumSpeed, int calories, HeartRate averageHeartRate,
                HeartRate maximumHeartRate, Intensity intensity, Cadence cadence, TriggerMethod triggerMethod,
-               List<Track> tracks, String notes) {
+               List<Track> tracks, Notes notes) {
         this.startTime = startTime;
         this.totalTime = totalTime;
         this.distance = distance;
@@ -59,7 +59,7 @@ public class Lap implements TCXSerializable {
                 track.serialize(serializer);
             }
         }
-        if(notes != null) serializer.print("<Notes>" + notes + "</Notes>");
+        if(notes != null) notes.serialize(serializer);
         serializer.print("</Lap>");
     }
 }
