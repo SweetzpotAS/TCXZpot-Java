@@ -2,6 +2,7 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
+import static com.sweetzpot.tcxzpot.builders.VersionBuilder.version;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -11,8 +12,7 @@ public class VersionTest {
     public void producesCorrectSerialization() throws Exception {
         Serializer serializer = mock(Serializer.class);
 
-        Version version = new Version(5, 3, 1, 7);
-        version.serialize(serializer);
+        version().major(5).minor(3).buildMajor(1).buildMinor(7).build().serialize(serializer);
 
         verify(serializer).print("<Version>");
         verify(serializer).print("<VersionMajor>5</VersionMajor>");
