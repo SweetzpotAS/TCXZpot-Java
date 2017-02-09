@@ -2,6 +2,8 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
+import static com.sweetzpot.tcxzpot.SensorState.ABSENT;
+import static com.sweetzpot.tcxzpot.builders.TrackpointBuilder.aTrackpoint;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
@@ -16,8 +18,14 @@ public class TrackpointTest {
         HeartRate heartRate = mock(HeartRate.class);
         Cadence cadence = mock(Cadence.class);
 
-        Trackpoint trackpoint = new Trackpoint(time, position, 123.0, 1200.0, heartRate, cadence, SensorState.ABSENT);
-        trackpoint.serialize(serializer);
+        aTrackpoint().onTime(time)
+                .withPosition(position)
+                .withAltitude(123)
+                .withDistance(1200)
+                .withHeartRate(heartRate)
+                .withCadence(cadence)
+                .withSensorState(ABSENT)
+                .build().serialize(serializer);
 
         verify(serializer).print("<Trackpoint>");
         verify(serializer).print("<Time>");
@@ -39,8 +47,8 @@ public class TrackpointTest {
         Serializer serializer = mock(Serializer.class);
         TCXDate time = mock(TCXDate.class);
 
-        Trackpoint trackpoint = new Trackpoint(time, null, null, null, null, null, null);
-        trackpoint.serialize(serializer);
+        aTrackpoint().onTime(time)
+                .build().serialize(serializer);
 
         verify(serializer).print("<Trackpoint>");
         verify(serializer).print("<Time>");
@@ -48,5 +56,10 @@ public class TrackpointTest {
         verify(serializer).print("</Time>");
         verify(serializer).print("</Trackpoint>");
         verifyNoMoreInteractions(serializer);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingTime() throws Exception {
+        aTrackpoint().build();
     }
 }
