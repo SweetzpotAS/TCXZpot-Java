@@ -6,9 +6,21 @@ import java.util.List;
 
 public class Track implements TCXSerializable {
 
-    private List<Trackpoint> trackpoints = new ArrayList<>();;
+    public static Track trackWith(Trackpoint... trackpoints) {
+        return new Track(trackpoints);
+    }
+
+    public static Track trackWith(List<Trackpoint> trackpoints) {
+        return new Track(trackpoints);
+    }
+
+    private List<Trackpoint> trackpoints = new ArrayList<>();
 
     public Track() {}
+
+    public Track(List<Trackpoint> trackpoints) {
+        this.trackpoints = new ArrayList<>(trackpoints);
+    }
 
     public Track(Trackpoint... trackpoints) {
         Collections.addAll(this.trackpoints, trackpoints);
