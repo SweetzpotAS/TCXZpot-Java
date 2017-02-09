@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public class Application extends AbstractSource implements TCXSerializable {
+public class Application extends AbstractSource {
 
     private final Build build;
     private final String languageID;

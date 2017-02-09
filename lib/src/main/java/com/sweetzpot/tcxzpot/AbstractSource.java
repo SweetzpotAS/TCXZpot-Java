@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public abstract class AbstractSource {
+public abstract class AbstractSource implements TCXSerializable {
 
     protected final String name;
 

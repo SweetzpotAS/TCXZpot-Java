@@ -1,6 +1,6 @@
 package com.sweetzpot.tcxzpot;
 
-public class Device extends AbstractSource implements TCXSerializable {
+public class Device extends AbstractSource {
 
     private final int unitID;
     private final int productID;
