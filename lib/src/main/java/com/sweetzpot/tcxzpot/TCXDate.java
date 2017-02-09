@@ -26,7 +26,12 @@ public class TCXDate implements TCXSerializable {
 
     @Override
     public void serialize(Serializer serializer) {
+        serializer.print(toString());
+    }
+
+    @Override
+    public String toString() {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        serializer.print(format.format(date));
+        return format.format(date);
     }
 }

@@ -1,7 +1,10 @@
 package com.sweetzpot.tcxzpot;
 
-public class Lap {
+import java.util.List;
 
+public class Lap implements TCXSerializable {
+
+    private final TCXDate startTime;
     private final double totalTime;
     private final double distance;
     private final Double maximumSpeed;
@@ -11,12 +14,13 @@ public class Lap {
     private final Intensity intensity;
     private final Cadence cadence;
     private final TriggerMethod triggerMethod;
-    private final Track track;
+    private final List<Track> tracks;
     private final String notes;
 
-    public Lap(double totalTime, double distance, Double maximumSpeed, int calories, HeartRate averageHeartRate,
+    public Lap(TCXDate startTime, double totalTime, double distance, Double maximumSpeed, int calories, HeartRate averageHeartRate,
                HeartRate maximumHeartRate, Intensity intensity, Cadence cadence, TriggerMethod triggerMethod,
-               Track track, String notes) {
+               List<Track> tracks, String notes) {
+        this.startTime = startTime;
         this.totalTime = totalTime;
         this.distance = distance;
         this.maximumSpeed = maximumSpeed;
@@ -26,7 +30,36 @@ public class Lap {
         this.intensity = intensity;
         this.cadence = cadence;
         this.triggerMethod = triggerMethod;
-        this.track = track;
+        this.tracks = tracks;
         this.notes = notes;
+    }
+
+    @Override
+    public void serialize(Serializer serializer) {
+        serializer.print("<Lap StartTime=\"" + startTime.toString() + "\">");
+        serializer.print("<TotalTimeSeconds>" + totalTime + "</TotalTimeSeconds>");
+        serializer.print("<DistanceMeters>" + distance + "</DistanceMeters>");
+        if(maximumSpeed != null) serializer.print("<MaximumSpeed>" + maximumSpeed + "</MaximumSpeed>");
+        serializer.print("<Calories>" + calories + "</Calories>");
+        if(averageHeartRate != null) {
+            serializer.print("<AverageHeartRateBpm>");
+            averageHeartRate.serialize(serializer);
+            serializer.print("</AverageHeartRateBpm>");
+        }
+        if(maximumHeartRate != null) {
+            serializer.print("<MaximumHeartRateBpm>");
+            maximumHeartRate.serialize(serializer);
+            serializer.print("</MaximumHeartRateBpm>");
+        }
+        intensity.serialize(serializer);
+        if(cadence!= null) cadence.serialize(serializer);
+        triggerMethod.serialize(serializer);
+        if(tracks != null) {
+            for(Track track : tracks) {
+                track.serialize(serializer);
+            }
+        }
+        if(notes != null) serializer.print("<Notes>" + notes + "</Notes>");
+        serializer.print("</Lap>");
     }
 }
