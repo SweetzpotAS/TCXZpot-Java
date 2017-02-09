@@ -15,11 +15,14 @@ public class Application extends AbstractSource {
 
     @Override
     public void serialize(Serializer serializer) {
-        serializer.print("<Application>");
         serializer.print("<Name>" + name + "</Name>");
         build.serialize(serializer);
         serializer.print("<LangID>" + languageID + "</LangID>");
         serializer.print("<PartNumber>" + partNumber + "</PartNumber>");
-        serializer.print("</Application>");
+    }
+
+    @Override
+    public String tcxType() {
+        return "Application_t";
     }
 }

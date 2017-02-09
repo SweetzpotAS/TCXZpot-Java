@@ -7,4 +7,6 @@ public abstract class AbstractSource implements TCXSerializable {
     public AbstractSource(String name) {
         this.name = name;
     }
+
+    public abstract String tcxType();
 }

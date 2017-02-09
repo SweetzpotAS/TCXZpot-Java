@@ -15,11 +15,9 @@ public class ApplicationTest {
         Application application = new Application("SweetZpot Rowing", build, "en", "123-45678-90");
         application.serialize(serializer);
 
-        verify(serializer).print("<Application>");
         verify(serializer).print("<Name>SweetZpot Rowing</Name>");
         verify(build).serialize(serializer);
         verify(serializer).print("<LangID>en</LangID>");
         verify(serializer).print("<PartNumber>123-45678-90</PartNumber>");
-        verify(serializer).print("</Application>");
     }
 }

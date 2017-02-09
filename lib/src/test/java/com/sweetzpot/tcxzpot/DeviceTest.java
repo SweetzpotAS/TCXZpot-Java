@@ -15,11 +15,9 @@ public class DeviceTest {
         Device device = new Device("BreathZpot", 256, 1298745, version);
         device.serialize(serializer);
 
-        verify(serializer).print("<Device>");
         verify(serializer).print("<Name>BreathZpot</Name>");
         verify(serializer).print("<UnitId>256</UnitId>");
         verify(serializer).print("<ProductID>1298745</ProductID>");
         verify(version).serialize(serializer);
-        verify(serializer).print("</Device>");
     }
 }
