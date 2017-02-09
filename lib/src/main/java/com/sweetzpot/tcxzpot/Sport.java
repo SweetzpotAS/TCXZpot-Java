@@ -15,4 +15,9 @@ public enum Sport implements TCXSerializable {
     public void serialize(Serializer serializer) {
         serializer.print(rawValue);
     }
+
+    @Override
+    public String toString() {
+        return rawValue;
+    }
 }
