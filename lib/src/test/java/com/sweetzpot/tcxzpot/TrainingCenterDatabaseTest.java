@@ -2,6 +2,7 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
+import static com.sweetzpot.tcxzpot.builders.TrainingCenterDatabaseBuilder.trainingCenterDatabase;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
@@ -16,8 +17,9 @@ public class TrainingCenterDatabaseTest {
         Device device = mock(Device.class);
         when(device.tcxType()).thenCallRealMethod();
 
-        TrainingCenterDatabase trainingCenterDatabase = new TrainingCenterDatabase(activities, device);
-        trainingCenterDatabase.serialize(serializer);
+        trainingCenterDatabase().withActivities(activities)
+                .withAuthor(device)
+                .build().serialize(serializer);
 
         verify(serializer).print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
         verify(serializer).print("<TrainingCenterDatabase\n" +
@@ -35,8 +37,7 @@ public class TrainingCenterDatabaseTest {
     public void producesCorrectSerializationWithMissingArguments() throws Exception {
         Serializer serializer = mock(Serializer.class);
 
-        TrainingCenterDatabase trainingCenterDatabase = new TrainingCenterDatabase(null, null);
-        trainingCenterDatabase.serialize(serializer);
+        trainingCenterDatabase().build().serialize(serializer);
 
         verify(serializer).print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
         verify(serializer).print("<TrainingCenterDatabase\n" +
