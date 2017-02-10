@@ -33,11 +33,6 @@ public class TrackpointBuilder {
         return this;
     }
 
-    public TrackpointBuilder withPosition(PositionBuilder positionBuilder) {
-        this.position = positionBuilder.build();
-        return this;
-    }
-
     public TrackpointBuilder withAltitude(double altitude) {
         this.altitude = altitude;
         return this;
