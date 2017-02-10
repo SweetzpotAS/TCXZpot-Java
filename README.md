@@ -67,6 +67,14 @@ trainingCenterDatabase()
 serializer.save();
 ```
 
+### Download
+
+You can get TCXZpot from JCenter using Gradle:
+
+``` groovy
+compile 'com.sweetzpot.tcxzpot:lib:0.1.0'
+```
+
 
 ## License
 
