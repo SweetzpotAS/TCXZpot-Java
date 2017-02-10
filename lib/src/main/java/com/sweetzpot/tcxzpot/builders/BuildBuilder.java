@@ -21,6 +21,11 @@ public class BuildBuilder {
         return this;
     }
 
+    public BuildBuilder withVersion(VersionBuilder versionBuilder) {
+        this.version = versionBuilder.build();
+        return this;
+    }
+
     public BuildBuilder withType(BuildType type) {
         this.type = type;
         return this;
