@@ -1,5 +1,7 @@
 package com.sweetzpot.tcxzpot;
 
+import com.sweetzpot.tcxzpot.builders.TrackpointBuilder;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +13,14 @@ public class Track implements TCXSerializable {
     }
 
     public static Track trackWith(List<Trackpoint> trackpoints) {
+        return new Track(trackpoints);
+    }
+
+    public static Track trackWith(TrackpointBuilder... trackpointBuilders) {
+        List<Trackpoint> trackpoints = new ArrayList<>();
+        for(TrackpointBuilder builder : trackpointBuilders) {
+            trackpoints.add(builder.build());
+        }
         return new Track(trackpoints);
     }
 
