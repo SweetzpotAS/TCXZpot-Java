@@ -2,10 +2,9 @@ package com.sweetzpot.tcxzpot;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
-
+import static com.sweetzpot.tcxzpot.Sport.RUNNING;
 import static com.sweetzpot.tcxzpot.TCXDate.tcxDate;
+import static com.sweetzpot.tcxzpot.builders.ActivityBuilder.activity;
 import static java.util.Calendar.FEBRUARY;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -17,14 +16,15 @@ public class ActivityTest {
     public void producesCorrectSerialization() throws Exception {
         Serializer serializer = mock(Serializer.class);
         Lap lap = mock(Lap.class);
-        List<Lap> laps = Arrays.asList(lap);
         Notes notes = mock(Notes.class);
         Application application = mock(Application.class);
         when(application.tcxType()).thenCallRealMethod();
 
-        Activity activity = new Activity(tcxDate(1, FEBRUARY, 2017, 12, 34, 56), laps,
-                notes, application, Sport.RUNNING);
-        activity.serialize(serializer);
+        activity(RUNNING).withID(tcxDate(1, FEBRUARY, 2017, 12, 34, 56))
+                .withLaps(lap)
+                .withNotes(notes)
+                .withCreator(application)
+                .build().serialize(serializer);
 
         verify(serializer).print("<Activity Sport=\"Running\">");
         verify(serializer).print("<Id>2017-02-01T12:34:56.000Z</Id>");
@@ -40,15 +40,34 @@ public class ActivityTest {
     public void producesCorrectSerializationWithMissingArguments() throws Exception {
         Serializer serializer = mock(Serializer.class);
         Lap lap = mock(Lap.class);
-        List<Lap> laps = Arrays.asList(lap);
 
-        Activity activity = new Activity(tcxDate(1, FEBRUARY, 2017, 12, 34, 56), laps,
-                null, null, Sport.RUNNING);
-        activity.serialize(serializer);
+        activity(RUNNING).withID(tcxDate(1, FEBRUARY, 2017, 12, 34, 56))
+                .withLaps(lap)
+                .build().serialize(serializer);
 
         verify(serializer).print("<Activity Sport=\"Running\">");
         verify(serializer).print("<Id>2017-02-01T12:34:56.000Z</Id>");
         verify(lap).serialize(serializer);
         verify(serializer).print("</Activity>");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingSport() throws Exception {
+        activity(null).withID(tcxDate(1, FEBRUARY, 2017, 12, 34, 56))
+                .withLaps(mock(Lap.class))
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingID() throws Exception {
+        activity(RUNNING)
+                .withLaps(mock(Lap.class))
+                .build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfMissingLaps() throws Exception {
+        activity(RUNNING).withID(tcxDate(1, FEBRUARY, 2017, 12, 34, 56))
+                .build();
     }
 }
