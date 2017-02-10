@@ -31,4 +31,24 @@ public class PositionTest {
     public void throwsExceptionIfMissingLongitude() throws Exception {
         aPosition().withLatitude(1.0).build();
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfLatitudeIsUnderRange() throws Exception {
+        aPosition().withLatitude(-1000).withLongitude(0).build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfLatitudeIsAboveRange() throws Exception {
+        aPosition().withLatitude(1000).withLongitude(0).build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfLongitudeIsUnderRange() throws Exception {
+        aPosition().withLatitude(0).withLongitude(-1000).build();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsExceptionIfLongitudeIsAboveRange() throws Exception {
+        aPosition().withLatitude(0).withLongitude(1000).build();
+    }
 }
