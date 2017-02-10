@@ -61,6 +61,11 @@ public class ActivityBuilder {
         return this;
     }
 
+    public ActivityBuilder withCreator(AbstractSourceBuilder creatorBuilder) {
+        this.creator = creatorBuilder.build();
+        return this;
+    }
+
     public Activity build() {
         validateArguments();
         return new Activity(id, laps, notes, creator, sport);

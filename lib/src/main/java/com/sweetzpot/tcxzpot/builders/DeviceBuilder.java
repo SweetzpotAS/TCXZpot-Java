@@ -5,7 +5,7 @@ import com.sweetzpot.tcxzpot.Version;
 
 import static com.sweetzpot.tcxzpot.builders.StringUtil.isNullOrEmpty;
 
-public class DeviceBuilder {
+public class DeviceBuilder extends AbstractSourceBuilder {
 
     public static DeviceBuilder device(String name) {
         return new DeviceBuilder(name);

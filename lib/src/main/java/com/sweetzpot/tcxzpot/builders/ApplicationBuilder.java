@@ -5,7 +5,7 @@ import com.sweetzpot.tcxzpot.Build;
 
 import static com.sweetzpot.tcxzpot.builders.StringUtil.isNullOrEmpty;
 
-public class ApplicationBuilder {
+public class ApplicationBuilder extends AbstractSourceBuilder {
 
     public static ApplicationBuilder application(String name) {
         return new ApplicationBuilder(name);
