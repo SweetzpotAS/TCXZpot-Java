@@ -72,7 +72,7 @@ serializer.save();
 You can get TCXZpot from JCenter using Gradle:
 
 ``` groovy
-compile 'com.sweetzpot.tcxzpot:lib:0.1.0'
+compile 'com.sweetzpot.tcxzpot:lib:0.1.1'
 ```
 
 
