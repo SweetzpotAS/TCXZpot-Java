@@ -2,6 +2,8 @@ package com.sweetzpot.tcxzpot;
 
 import java.util.List;
 
+import static com.sweetzpot.tcxzpot.util.TCXExtensionSerialization.serializeExtensions;
+
 public class Activity implements TCXSerializable {
 
     private final TCXDate id;
@@ -33,13 +35,7 @@ public class Activity implements TCXSerializable {
             creator.serialize(serializer);
             serializer.print("</Creator>");
         }
-        if(extensions != null && extensions.length > 0) {
-            serializer.print("<Extensions>");
-            for(TCXExtension extension : extensions) {
-                extension.serialize(serializer);
-            }
-            serializer.print("</Extensions>");
-        }
+        serializeExtensions(extensions, serializer);
         serializer.print("</Activity>");
     }
 }
