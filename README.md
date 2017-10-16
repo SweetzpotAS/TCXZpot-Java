@@ -13,7 +13,7 @@ The root of a TCX file is a `TrainingCenterDatabase` which can have children of 
 - ❌ Workouts
 - ❌ Courses
 - ✅ Author
-- ❌ Extensions
+- ✅ Extensions
 
 Within the supported modules, everything has been implemented except Extensions.
 
@@ -72,7 +72,7 @@ serializer.save();
 You can get TCXZpot from JCenter using Gradle:
 
 ``` groovy
-compile 'com.sweetzpot.tcxzpot:lib:0.1.1'
+compile 'com.sweetzpot.tcxzpot:lib:0.2.0'
 ```
 
 
