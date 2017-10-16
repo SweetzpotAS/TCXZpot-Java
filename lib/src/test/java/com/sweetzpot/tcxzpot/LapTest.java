@@ -21,6 +21,7 @@ public class LapTest {
         Serializer serializer = mock(Serializer.class);
         HeartRate averageHeartRate = mock(HeartRate.class);
         HeartRate maximumHeartRate = mock(HeartRate.class);
+        TCXExtension extension = mock(TCXExtension.class);
         Cadence cadence = mock(Cadence.class);
         Track track = mock(Track.class);
         List<Track> tracks = Arrays.asList(track);
@@ -38,6 +39,7 @@ public class LapTest {
                 .withTriggerMethod(MANUAL)
                 .withTracks(tracks)
                 .withNotes(notes)
+                .withExtensions(extension)
                 .build().serialize(serializer);
 
         verify(serializer).print("<Lap StartTime=\"2017-02-01T12:34:56.000Z\">");
@@ -56,6 +58,9 @@ public class LapTest {
         verify(serializer).print("<TriggerMethod>Manual</TriggerMethod>");
         verify(track).serialize(serializer);
         verify(notes).serialize(serializer);
+        verify(serializer).print("<Extensions>");
+        verify(extension).serialize(serializer);
+        verify(serializer).print("</Extensions>");
         verify(serializer).print("</Lap>");
     }
 

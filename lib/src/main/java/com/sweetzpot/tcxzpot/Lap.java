@@ -2,6 +2,8 @@ package com.sweetzpot.tcxzpot;
 
 import java.util.List;
 
+import static com.sweetzpot.tcxzpot.util.TCXExtensionSerialization.serializeExtensions;
+
 public class Lap implements TCXSerializable {
 
     private final TCXDate startTime;
@@ -16,10 +18,11 @@ public class Lap implements TCXSerializable {
     private final TriggerMethod triggerMethod;
     private final List<Track> tracks;
     private final Notes notes;
+    private final TCXExtension[] extensions;
 
     public Lap(TCXDate startTime, double totalTime, double distance, Double maximumSpeed, int calories, HeartRate averageHeartRate,
                HeartRate maximumHeartRate, Intensity intensity, Cadence cadence, TriggerMethod triggerMethod,
-               List<Track> tracks, Notes notes) {
+               List<Track> tracks, Notes notes, TCXExtension... extensions) {
         this.startTime = startTime;
         this.totalTime = totalTime;
         this.distance = distance;
@@ -32,6 +35,7 @@ public class Lap implements TCXSerializable {
         this.triggerMethod = triggerMethod;
         this.tracks = tracks;
         this.notes = notes;
+        this.extensions = extensions;
     }
 
     @Override
@@ -60,6 +64,7 @@ public class Lap implements TCXSerializable {
             }
         }
         if(notes != null) notes.serialize(serializer);
+        serializeExtensions(extensions, serializer);
         serializer.print("</Lap>");
     }
 }
