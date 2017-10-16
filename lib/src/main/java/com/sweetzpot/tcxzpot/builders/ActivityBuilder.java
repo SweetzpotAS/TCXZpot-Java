@@ -6,12 +6,15 @@ import com.sweetzpot.tcxzpot.Lap;
 import com.sweetzpot.tcxzpot.Notes;
 import com.sweetzpot.tcxzpot.Sport;
 import com.sweetzpot.tcxzpot.TCXDate;
+import com.sweetzpot.tcxzpot.TCXExtension;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class ActivityBuilder {
+
+    private TCXExtension[] extensions;
 
     public static ActivityBuilder activity(Sport sport) {
         return new ActivityBuilder(sport);
@@ -66,9 +69,14 @@ public class ActivityBuilder {
         return this;
     }
 
+    public ActivityBuilder withExtensions(TCXExtension... extensions) {
+        this.extensions = extensions;
+        return this;
+    }
+
     public Activity build() {
         validateArguments();
-        return new Activity(id, laps, notes, creator, sport);
+        return new Activity(id, laps, notes, creator, sport, extensions);
     }
 
     private void validateArguments() {

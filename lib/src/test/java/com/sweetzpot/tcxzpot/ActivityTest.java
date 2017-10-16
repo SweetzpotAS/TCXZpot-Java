@@ -18,12 +18,14 @@ public class ActivityTest {
         Lap lap = mock(Lap.class);
         Notes notes = mock(Notes.class);
         Application application = mock(Application.class);
+        TCXExtension extension = mock(TCXExtension.class);
         when(application.tcxType()).thenCallRealMethod();
 
         activity(RUNNING).withID(tcxDate(1, FEBRUARY, 2017, 12, 34, 56))
                 .withLaps(lap)
                 .withNotes(notes)
                 .withCreator(application)
+                .withExtensions(extension)
                 .build().serialize(serializer);
 
         verify(serializer).print("<Activity Sport=\"Running\">");
@@ -33,6 +35,9 @@ public class ActivityTest {
         verify(serializer).print("<Creator xsi:type=\"Application_t\">");
         verify(application).serialize(serializer);
         verify(serializer).print("</Creator>");
+        verify(serializer).print("<Extensions>");
+        verify(extension).serialize(serializer);
+        verify(serializer).print("</Extensions>");
         verify(serializer).print("</Activity>");
     }
 
