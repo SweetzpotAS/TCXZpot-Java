@@ -7,3 +7,30 @@ dependencies {
     sourceCompatibility = 1.7
     targetCompatibility = 1.7
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'tcxzpot'
+
+    publishedGroupId = 'com.sweetzpot.tcxzpot'
+    libraryName = 'TCXZpot'
+    artifact = 'lib'
+
+    libraryDescription = 'A fluent Java library to create TCX files.'
+
+    siteUrl = 'https://github.com/SweetzpotAS/TCXZpot-Java'
+    gitUrl = 'https://github.com/SweetzpotAS/TCXZpot-Java.git'
+
+    libraryVersion = '0.2.0'
+
+    developerId = 'sweetzpot'
+    developerName = 'SweetZpot AS'
+    developerEmail = 'sweetzpot.as@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

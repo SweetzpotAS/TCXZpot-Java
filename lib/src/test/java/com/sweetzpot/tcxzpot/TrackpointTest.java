@@ -17,6 +17,7 @@ public class TrackpointTest {
         Position position = mock(Position.class);
         HeartRate heartRate = mock(HeartRate.class);
         Cadence cadence = mock(Cadence.class);
+        TCXExtension extension = mock(TCXExtension.class);
 
         aTrackpoint().onTime(time)
                 .withPosition(position)
@@ -25,6 +26,7 @@ public class TrackpointTest {
                 .withHeartRate(heartRate)
                 .withCadence(cadence)
                 .withSensorState(ABSENT)
+                .withExtensions(extension)
                 .build().serialize(serializer);
 
         verify(serializer).print("<Trackpoint>");
@@ -39,6 +41,9 @@ public class TrackpointTest {
         verify(serializer).print("</HeartRateBpm>");
         verify(cadence).serialize(serializer);
         verify(serializer).print("<SensorState>Absent</SensorState>");
+        verify(serializer).print("<Extensions>");
+        verify(extension).serialize(serializer);
+        verify(serializer).print("</Extensions>");
         verify(serializer).print("</Trackpoint>");
     }
 

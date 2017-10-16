@@ -6,6 +6,7 @@ import com.sweetzpot.tcxzpot.Intensity;
 import com.sweetzpot.tcxzpot.Lap;
 import com.sweetzpot.tcxzpot.Notes;
 import com.sweetzpot.tcxzpot.TCXDate;
+import com.sweetzpot.tcxzpot.TCXExtension;
 import com.sweetzpot.tcxzpot.Track;
 import com.sweetzpot.tcxzpot.TriggerMethod;
 
@@ -14,6 +15,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class LapBuilder {
+
+    private TCXExtension[] extensions;
 
     public static LapBuilder aLap(TCXDate startTime) {
         return new LapBuilder(startTime);
@@ -97,10 +100,15 @@ public class LapBuilder {
         return this;
     }
 
+    public LapBuilder withExtensions(TCXExtension... extensions) {
+        this.extensions = extensions;
+        return this;
+    }
+
     public Lap build() {
         validateArguments();
         return new Lap(startTime, totalTime, distance, maximumSpeed, calories, averageHeartRate,
-                maximumHeartRate, intensity, cadence, triggerMethod, tracks, notes);
+                maximumHeartRate, intensity, cadence, triggerMethod, tracks, notes, extensions);
     }
 
     private void validateArguments() {

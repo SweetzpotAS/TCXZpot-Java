@@ -1,5 +1,7 @@
 package com.sweetzpot.tcxzpot;
 
+import static com.sweetzpot.tcxzpot.util.TCXExtensionSerialization.serializeExtensions;
+
 public class Trackpoint implements TCXSerializable {
 
     private final TCXDate time;
@@ -9,9 +11,10 @@ public class Trackpoint implements TCXSerializable {
     private final HeartRate heartRate;
     private final Cadence cadence;
     private final SensorState sensorState;
+    private final TCXExtension[] extensions;
 
     public Trackpoint(TCXDate time, Position position, Double altitude, Double distance, HeartRate heartRate,
-                      Cadence cadence, SensorState sensorState) {
+                      Cadence cadence, SensorState sensorState, TCXExtension... extensions) {
         this.time = time;
         this.position = position;
         this.altitude = altitude;
@@ -19,6 +22,7 @@ public class Trackpoint implements TCXSerializable {
         this.heartRate = heartRate;
         this.cadence = cadence;
         this.sensorState = sensorState;
+        this.extensions = extensions;
     }
 
     @Override
@@ -37,6 +41,7 @@ public class Trackpoint implements TCXSerializable {
         }
         if(cadence != null) cadence.serialize(serializer);
         if(sensorState != null) sensorState.serialize(serializer);
+        serializeExtensions(extensions, serializer);
         serializer.print("</Trackpoint>");
     }
 }

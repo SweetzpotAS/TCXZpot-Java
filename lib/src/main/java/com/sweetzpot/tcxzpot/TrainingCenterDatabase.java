@@ -1,13 +1,17 @@
 package com.sweetzpot.tcxzpot;
 
+import static com.sweetzpot.tcxzpot.util.TCXExtensionSerialization.serializeExtensions;
+
 public class TrainingCenterDatabase implements TCXSerializable {
 
     private final Activities activities;
     private final AbstractSource author;
+    private final TCXExtension[] extensions;
 
-    public TrainingCenterDatabase(Activities activities, AbstractSource author) {
+    public TrainingCenterDatabase(Activities activities, AbstractSource author, TCXExtension... extensions) {
         this.activities = activities;
         this.author = author;
+        this.extensions = extensions;
     }
 
     @Override
@@ -23,6 +27,7 @@ public class TrainingCenterDatabase implements TCXSerializable {
             author.serialize(serializer);
             serializer.print("</Author>");
         }
+        serializeExtensions(extensions, serializer);
         serializer.print("</TrainingCenterDatabase>");
     }
 }

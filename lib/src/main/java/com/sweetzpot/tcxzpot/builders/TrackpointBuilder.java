@@ -5,9 +5,12 @@ import com.sweetzpot.tcxzpot.HeartRate;
 import com.sweetzpot.tcxzpot.Position;
 import com.sweetzpot.tcxzpot.SensorState;
 import com.sweetzpot.tcxzpot.TCXDate;
+import com.sweetzpot.tcxzpot.TCXExtension;
 import com.sweetzpot.tcxzpot.Trackpoint;
 
 public class TrackpointBuilder {
+
+    private TCXExtension[] extensions;
 
     public static TrackpointBuilder aTrackpoint() {
         return new TrackpointBuilder();
@@ -58,9 +61,14 @@ public class TrackpointBuilder {
         return this;
     }
 
+    public TrackpointBuilder withExtensions(TCXExtension... extensions) {
+        this.extensions = extensions;
+        return this;
+    }
+
     public Trackpoint build() {
         validateArguments();
-        return new Trackpoint(time, position, altitude, distance, heartRate, cadence, sensorState);
+        return new Trackpoint(time, position, altitude, distance, heartRate, cadence, sensorState, extensions);
     }
 
     private void validateArguments() {
