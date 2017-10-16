@@ -14,11 +14,13 @@ public class TrainingCenterDatabaseTest {
     public void producesCorrectSerialization() throws Exception {
         Serializer serializer = mock(Serializer.class);
         Activities activities = mock(Activities.class);
+        TCXExtension extension = mock(TCXExtension.class);
         Device device = mock(Device.class);
         when(device.tcxType()).thenCallRealMethod();
 
         trainingCenterDatabase().withActivities(activities)
                 .withAuthor(device)
+                .withExtensions(extension)
                 .build().serialize(serializer);
 
         verify(serializer).print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
@@ -30,6 +32,9 @@ public class TrainingCenterDatabaseTest {
         verify(serializer).print("<Author xsi:type=\"Device_t\">");
         verify(device).serialize(serializer);
         verify(serializer).print("</Author>");
+        verify(serializer).print("<Extensions>");
+        verify(extension).serialize(serializer);
+        verify(serializer).print("</Extensions>");
         verify(serializer).print("</TrainingCenterDatabase>");
     }
 
